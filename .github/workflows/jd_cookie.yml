@@ -19,10 +19,10 @@
 
 
 
-name: ziye-sync
+name: 自动更新
 on:
   schedule:
-    - cron: '1 */12 * * *'
+    - cron: '0 */4 * * *'
   workflow_dispatch:
   watch:
     types: started
@@ -43,7 +43,7 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/sngxpro/QuanX.git"
+          source_repo: "https://github.com/ufuckee/jd_cookie.git"
           source_branch: "master"
-          destination_branch: "task"
+          destination_branch: "sill_ck"
           github_token: ${{ secrets.PAT }}
